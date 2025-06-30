@@ -37,7 +37,7 @@ export const Card = (props) => {
   //   console.log("userInfo:", userInfo ,userInfo.hardSolved,userInfo.totalHard);
 
   return (
-    <div className="text-white">
+    <div className="text-white lg:scale-100 md:scale-75 scale-50">
       {userInfo ? (
         <div className="bg-[#505050]/36 rounded-[20px] ring-0 hover:ring-[1px] hover:ring-blue-400 w-200 flex ">
           <div className="flex flex-col px-8 py-4 justify-center border-r-[1px] border-white items-center gap-4">
