@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
-import logo from "./assets/logo.svg";
+import logo from ".././assets/logo.svg";
 import { buildStyles, CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 
 export const Card = (props) => {
   const [userInfo, setUser] = useState(null);
   const [hovered, setHover] = useState(false);
+  
   const getResponse = async () => {
     const response = await fetch(
       `https://leetcode-stats-api.herokuapp.com/${props.user}`
@@ -16,7 +17,15 @@ export const Card = (props) => {
 
   useEffect(() => {
     if (props.user) {
-      getResponse().then((data) => setUser(data));
+      getResponse().then((data) => setUser(data)).catch((e)=>{
+        setUser( {
+          totalEasy: "cant fetch",
+          totalHard: "cant fetch",
+          totalMedium: 'cant fetch',
+          acceptanceRate: 'cant fetch'
+        })
+        console.log(e)
+      });
     }
   }, [props.user]);
 

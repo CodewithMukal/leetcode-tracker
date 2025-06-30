@@ -1,18 +1,22 @@
-import { Card } from "./Card"
+import { BrowserRouter, createBrowserRouter, RouterProvider } from "react-router"
+import { Home } from "./Home"
+import { Leaderboard } from "./Leaderboard"
 
 function App() {
-
+  const router = createBrowserRouter([
+     {
+      path:"/",
+      element: <Home/>
+     },
+     {
+      path:'/leaderboard',
+      element:<Leaderboard/>
+     }
+  ])
   const users = ["thedevsumit","krishN_99","mukalcode","vedant_8075"]
   return (
     <>
-      <div className="flex justify-center items-center gap-12 my-6">
-        <Card user="mukalcode"/>
-        <Card user="thedevsumit"/>
-      </div>
-      <div className="flex justify-center items-center gap-12 my-6">
-        <Card user="krishN_99"/>
-        <Card user="vedant_8075"/>
-      </div>
+      <RouterProvider router={router}/>
     </>
   )
 }
