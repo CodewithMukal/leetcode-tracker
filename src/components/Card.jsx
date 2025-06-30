@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import logo from ".././assets/logo.svg";
+import logo from "../assets/logo.svg";
 import { buildStyles, CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 
@@ -9,7 +9,7 @@ export const Card = (props) => {
   
   const getResponse = async () => {
     const response = await fetch(
-      `https://leetcode-stats-api.herokuapp.com/${props.user}`
+      `https://leetscan.vercel.app/${props.user}`
     );
     const result = await response.json();
     return result;

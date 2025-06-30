@@ -3,8 +3,3 @@
     font-family: 'Montserrat'
 }
 @import 'tailwindcss';
-@theme{
-    --color-primary: "#1A535C";
-    --color-secondary: "#4ECDC4"
-
-}
