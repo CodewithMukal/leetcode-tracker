@@ -9,7 +9,7 @@ export const Card = (props) => {
   
   const getResponse = async () => {
     const response = await fetch(
-      `https://leetscan.vercel.app/${props.user}`
+      `https://leetcode-stats.tashif.codes/${props.user}`
     );
     const result = await response.json();
     return result;
