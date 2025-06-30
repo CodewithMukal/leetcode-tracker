@@ -17,24 +17,29 @@ export const Card = (props) => {
 
   useEffect(() => {
     if (props.user) {
-      getResponse().then((data) => setUser(data)).catch((e)=>{
-        setUser( {
-          totalEasy: "cant fetch",
-          totalHard: "cant fetch",
-          totalMedium: 'cant fetch',
-          acceptanceRate: 'cant fetch'
+      getResponse()
+        .then((data) => {
+          setUser(data);
         })
-        console.log(e)
-      });
+        .catch((e) => {
+          setUser({
+            totalEasy: "cant fetch",
+            totalHard: "cant fetch",
+            totalMedium: "cant fetch",
+            acceptanceRate: "cant fetch",
+          });
+          console.error(e);
+        });
     }
   }, [props.user]);
+  
 
   //   console.log("userInfo:", userInfo ,userInfo.hardSolved,userInfo.totalHard);
 
   return (
     <div className="text-white">
       {userInfo ? (
-        <div className="bg-[#505050]/36 rounded-[20px] border-0 hover:border-[1px] hover:border-blue-400 w-200 flex ">
+        <div className="bg-[#505050]/36 rounded-[20px] ring-0 hover:ring-[1px] hover:ring-blue-400 w-200 flex ">
           <div className="flex flex-col px-8 py-4 justify-center border-r-[1px] border-white items-center gap-4">
             <a
               href={`https://leetcode.com/u/${props.user}`}
