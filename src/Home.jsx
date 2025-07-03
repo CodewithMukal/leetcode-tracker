@@ -7,7 +7,11 @@ export const Home = () => {
       <div className="flex flex-col gap-4 justify-center items-center lg:grid lg:grid-cols-2 w-fit mx-auto lg:gap-12 lg:my-6">
         <Card user="mukalcode" />
         <Card user="thedevsumit" />
-        <Card user="krishN_99" />
+        <div>
+          <h1 className="text-3xl font-bold">
+            Krish Negi will not be remembered
+          </h1>
+        </div>
         <Card user="vedant_8075" />
         <Card user="aravtyagi0001" />
         <Card user="Ankush_Kharb" />
