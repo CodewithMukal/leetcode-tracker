@@ -8,7 +8,7 @@ export const Home = () => {
         <Card user="mukalcode" />
         <Card user="thedevsumit" />
         <div>
-          <h1 className="text-3xl font-bold">
+          <h1 className="text-3xl font-bold text-white">
             Krish Negi will not be remembered
           </h1>
         </div>
