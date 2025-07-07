@@ -11,6 +11,7 @@ export const Home = () => {
         <Card user="vedant_8075" />
         <Card user="aravtyagi0001" />
         <Card user="Ankush_Kharb" />
+        <Card user="Adityrajverma007" />
       </div>
     </div>
   );
