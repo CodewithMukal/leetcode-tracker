@@ -8,7 +8,7 @@ export const Home = () => {
         <Card user="mukalcode" />
         <Card user="thedevsumit" />
          <Card user="krishN_98" />
-        <Card user="vedant_8075" />
+        <Card user="vedant_0000" />
         <Card user="aravtyagi0001" />
         <Card user="Ankush_Kharb" />
         <Card user="Adityrajverma0007" />
